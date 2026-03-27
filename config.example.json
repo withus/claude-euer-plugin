@@ -1,0 +1,62 @@
+{
+  "_hinweis": "Vorlage mit erfundenen Beispielwerten. Als config.json im Plugin-Datenordner ablegen und alle Platzhalter in spitzen Klammern ersetzen.",
+  "steuer_root": "<STEUER_ROOT>",
+  "unternehmer": {
+    "rechnungsempfaenger": "<NAME_UNTERNEHMER>"
+  },
+  "ausgangsrechnungen": {
+    "nummernformat": "RE-YYYYMMDDNN"
+  },
+  "konten": [
+    {
+      "id": "geschaeftskonto",
+      "art": "geschaeftlich",
+      "csv_format": "format_a",
+      "ignoriere_umbuchungen": {
+        "spalte": "kontoname",
+        "werte": ["<NAME_UNTERKONTO>"]
+      }
+    },
+    {
+      "id": "privatkonto",
+      "art": "privat_gemischt",
+      "csv_format": "format_b",
+      "kontonummern": ["<KONTONUMMER_1>", "<KONTONUMMER_2>"],
+      "csv_dateiname_enthaelt": ["<DATEINAME_MUSTER>"],
+      "kontoauszug_dateiname_enthaelt": ["Kontoauszug", "<KONTONUMMER_1>"]
+    }
+  ],
+  "csv_formate": {
+    "format_a": {
+      "beschreibung": "Komma-getrennt, ISO-Datum, Punkt als Dezimaltrenner, englische Spaltenköpfe",
+      "erkennung_header_enthaelt": ["Date", "Counterparty", "Amount"],
+      "trennzeichen": ",",
+      "datumsformat": "YYYY-MM-DD",
+      "dezimaltrenner": ".",
+      "spalten": {
+        "buchungsdatum": "Date",
+        "partner": "Counterparty",
+        "verwendungszweck": "Reference",
+        "betrag": "Amount",
+        "kontoname": "Account"
+      }
+    },
+    "format_b": {
+      "beschreibung": "Semikolon-getrennt, Datum DD.MM.YYYY, Betrag mit Komma, deutsche Spaltenköpfe",
+      "erkennung_header_enthaelt": ["Buchungstag", "Verwendungszweck", "Betrag"],
+      "trennzeichen": ";",
+      "datumsformat": "DD.MM.YYYY",
+      "dezimaltrenner": ",",
+      "spalten": {
+        "buchungsdatum": "Buchungstag",
+        "partner": "Name Zahlungsbeteiligter",
+        "verwendungszweck": "Verwendungszweck",
+        "betrag": "Betrag"
+      }
+    }
+  },
+  "kreditkarte": {
+    "abrechnung_dateiname_enthaelt": ["Kartenabrechnung"],
+    "abrechnung_inhalt_enthaelt": ["<NAME_KARTENANBIETER>", "Kreditkartenabrechnung"]
+  }
+}

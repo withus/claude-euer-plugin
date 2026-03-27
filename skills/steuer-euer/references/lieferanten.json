@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "description": "Beispiel-Lieferantenliste mit erfundenen Firmen für die EÜR. Durch eigene Einträge ersetzen.",
+    "last_updated": "YYYY-MM-DD",
+    "instructions": "bank_names = wie der Lieferant auf Kontoauszügen erscheint (Bank-CSV oder Kreditkarte). Kann mehrere Varianten haben."
+  },
+  "ausgaben": [
+    {
+      "name": "Beispiel Hosting GmbH",
+      "bank_names": ["BEISPIEL HOSTING", "Beispiel Hosting GmbH"],
+      "kategorie": "Hosting",
+      "ust": "DE-19%",
+      "land": "DE",
+      "notizen": "Webhosting, monatliche Rechnung"
+    },
+    {
+      "name": "Muster Software AG",
+      "bank_names": ["MUSTER SOFTWARE", "Muster Software AG"],
+      "kategorie": "Software",
+      "ust": "Ausland-0%",
+      "land": "CH",
+      "notizen": "Software-Abo. Sitz im Ausland, kein VSt-Abzug."
+    },
+    {
+      "name": "Beispiel Fachverlag GmbH",
+      "bank_names": ["BEISPIEL FACHVERLAG", "Beispiel Fachverlag GmbH"],
+      "kategorie": "Fachliteratur",
+      "ust": "DE-7%",
+      "land": "DE",
+      "notizen": "Fachbücher und Zeitschriften, ermäßigter Steuersatz 7%"
+    },
+    {
+      "name": "Muster Leasing GmbH",
+      "bank_names": ["MUSTER LEASING", "Muster Leasing GmbH", "KFZ-Leasing"],
+      "kategorie": "KFZ",
+      "ust": "DE-19%",
+      "land": "DE",
+      "notizen": "KFZ-Leasing. Monatliche Rate (Beispiel: 400,00 EUR), gelegentlich abweichende Sonderraten. Wird auch per Kreditkarte bezahlt."
+    },
+    {
+      "name": "Beispiel Bürobedarf GmbH",
+      "bank_names": ["BEISPIEL BUEROBEDARF", "Beispiel Bürobedarf GmbH"],
+      "kategorie": "Büromaterial/Hardware",
+      "ust": "DE-19%",
+      "land": "DE",
+      "notizen": "ACHTUNG: Kann privat oder geschäftlich sein! Prüfen ob Hardware/Bürobedarf."
+    }
+  ],
+  "einnahmen": [
+    {
+      "name": "Beispiel Kunde GmbH",
+      "bank_names": ["BEISPIEL KUNDE", "Beispiel Kunde GmbH"],
+      "notizen": "Hauptkunde (erfunden). RE-Nummern im Format YYYYMMDDNN."
+    },
+    {
+      "name": "Muster Agentur",
+      "bank_names": ["MUSTER AGENTUR"],
+      "notizen": "Agenturkunde (erfunden). Web- und Marketing-Dienstleistungen."
+    }
+  ],
+  "ignorieren": [
+    {
+      "name": "Beispiel Fremdfirma GmbH",
+      "bank_names": ["BEISPIEL FREMDFIRMA"],
+      "grund": "Rechnungen auf eine andere Firma ausgestellt, NICHT auf den Rechnungsempfänger aus config.json"
+    }
+  ],
+  "privat_konto": [
+    "SUPERMARKT", "DISCOUNTER", "DROGERIE", "MOEBELHAUS", "BEKLEIDUNG",
+    "STREAMING", "WERTPAPIERDEPOT", "BAUSPARVERTRAG", "PRIVATVERSICHERUNG"
+  ]
+}

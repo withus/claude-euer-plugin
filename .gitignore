@@ -1,0 +1,11 @@
+# Eigene Daten nie einchecken
+config.json
+lieferanten.json
+!skills/steuer-euer/references/lieferanten.json
+*.[xX][lL][sS][xX]
+*.[xX][lL][sS]
+*.[oO][dD][sS]
+*.[cC][sS][vV]
+*.[pP][dD][fF]
+.env
+.env.*

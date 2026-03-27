@@ -1,0 +1,16 @@
+{
+  "name": "steuer-euer",
+  "version": "2.0.0",
+  "description": "Automatisierte Buchhaltung und EÜR für Einzelunternehmer. Dump-Ordner verarbeiten, Bankdaten einlesen, Kreditkartenabrechnungen per OCR auslesen, Gmail scannen, EÜR aktualisieren.",
+  "author": {
+    "name": "Sven Withus"
+  },
+  "license": "MIT",
+  "keywords": [
+    "euer",
+    "buchhaltung",
+    "einnahmenueberschussrechnung",
+    "steuer"
+  ],
+  "repository": "https://github.com/withus/claude-euer-plugin"
+}
